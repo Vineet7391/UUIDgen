@@ -1,0 +1,5 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/vineet/UUID/UUIDgen/conf/routes,/home/vineet/UUID/UUIDgen/target/scala-2.13/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/vineet/UUID/UUIDgen/conf/application.conf,/home/vineet/UUID/UUIDgen/target/scala-2.13/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/vineet/UUID/UUIDgen/conf/logback.xml,/home/vineet/UUID/UUIDgen/target/scala-2.13/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/vineet/UUID/UUIDgen/conf/messages,/home/vineet/UUID/UUIDgen/target/scala-2.13/classes/messages)[0m

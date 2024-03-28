@@ -1,0 +1,54 @@
+@import java.util.UUID
+@(uuid:UUID, version:Int, bulkUUIDs: List[UUID] = List())
+
+@main(version) {
+  <div id="container">
+    <h1>Online UUID Generator</h1>
+    <div id="content">
+      <p>Your Version @if(version == 0){Nil/Empty UUID}else if(version ==9){GUID}else if(version != 1 && version != 3 && version != 5){4 UUID}else{@version UUID}:</p>
+      <span id="textToCopy">@uuid</span>
+      <button class="button" id="copyUUID">Copy</button>
+      <a class="button a_button" href="@controllers.routes.HomeController.index(version)">Refresh</a>
+    </div>
+    <br>
+    <br>
+    <form action="@controllers.routes.HomeController.bulkUUID(version,0)">
+      <label for="max_value">Bulk Version @if(version == 0){Nil/Empty UUID}else if(version ==9){GUID}else if(version != 1 && version != 3 && version != 5){4 UUID}else{@version UUID} Generation</label>
+      <input type="number" class="br" id="max_value" name="maxNo" value="@if(bulkUUIDs.nonEmpty){@bulkUUIDs.length}else{maxNo}" required placeholder="Max 1000">
+      <button class="button" type="submit">Submit</button>
+      @if(bulkUUIDs.nonEmpty){
+      <button class="button" type="button" id="copyTable" onclick="copyTableData()">Copy</button>
+      <button class="button" type="button" id="downloadButton">Download</button>
+      }
+    </form>
+    <br>
+    <br>
+    @if(bulkUUIDs.nonEmpty){
+    <table  id="dataTable">
+      <thead>
+      <tr>
+        <th>Serial No</th>
+        <th>UUID</th>
+      </tr>
+      </thead>
+      <tbody>
+      @for((uuid, index) <- bulkUUIDs.zipWithIndex){
+      <tr>
+        <td>@{index+1}</td>
+        <td>@uuid</td>
+      </tr>
+      }
+      <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+    }
+  </div>
+
+<div class="question">
+  @if(version == 9){
+    <p>A GUID (Globally Unique Identifier) is a unique identifier used in software development to uniquely identify resources such as documents, databases, and objects. It is a 128-bit integer typically displayed as a string of 32 hexadecimal digits separated by hyphens.</p>
+  }else {
+    <p>A UUID (Universally Unique Identifier) is a 128-bit identifier used in software to uniquely identify information, ensuring that no two items have the same identifier. It's commonly used in databases, distributed systems, and web applications for various purposes like generating unique keys or session IDs.</p>
+  }
+</div>
+}

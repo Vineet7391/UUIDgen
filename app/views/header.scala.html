@@ -1,0 +1,47 @@
+@(version:Int)
+
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="@controllers.routes.HomeController.index(4)">
+                    @if(version != 0 && version != 1 && version != 3 && version != 5 && version != 9){
+                        <strong>UUID Generator</strong>
+                    } else {
+                        UUID Generator
+                    }
+                </a>
+            </li>
+            <li>
+                <a href="@controllers.routes.HomeController.index(9)">
+                    @if(version == 9){
+                        <strong>GUID Generator</strong>
+                    } else {
+                        GUID Generator
+                    }
+                </a>
+            </li>
+            <li>
+                <a href="@controllers.routes.HomeController.index(0)">
+                    @if(version == 0){
+                    <strong>Nil/Empty UUID</strong>
+                    } else {
+                    Nil/Empty UUID
+                    }
+                </a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">UUID versions<span class="dropdown-icon">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="@controllers.routes.HomeController.index(1)">Version 1</a>
+                        <a href="@controllers.routes.HomeController.index(3)">Version 3</a>
+                        <a href="@controllers.routes.HomeController.index(4)">Version 4</a>
+                        <a href="@controllers.routes.HomeController.index(5)">Version 5</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
