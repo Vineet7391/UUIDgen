@@ -1,1 +1,13 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /home/vineet/UUID/UUIDgen/target/scala-2.13/uuidgen_2.13-1.0-SNAPSHOT-sources.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/vineet/UUID/UUIDgen/target/scala-2.13/uuidgen_2.13-1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	routes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/vineet/UUID/UUIDgen/conf/routes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/vineet/UUID/UUIDgen/conf/application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	logback.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/vineet/UUID/UUIDgen/conf/logback.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	messages[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/vineet/UUID/UUIDgen/conf/messages[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/HomeController.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/vineet/UUID/UUIDgen/app/controllers/HomeController.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
