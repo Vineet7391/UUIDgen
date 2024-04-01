@@ -1,0 +1,6 @@
+version: '3.0'
+services:
+  my-service:
+    buildCommand: sbt stage
+    env:
+      STAGING_PATH: target/universal/stage/bin/uuidgen.bat
